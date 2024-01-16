@@ -1,0 +1,111 @@
+/* - Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%) */
+
+
+
+:root{
+    --ff-sans:'Poppins',sans-serif;
+    --fw-light:200;
+    --fw-normal:400;
+    --fw-bold:600;
+    --gap:2rem;
+    --fs-400:0.9375rem;
+    --fs-500:1.25rem;
+    --fs-600:1.625rem;
+    --fs-900:2.5rem;
+
+    --clr-neutral-900:hsl(234,12%,34%);
+    --clr-neutral-400:hsl(229,6%,66%);
+    --clr-neutral-100:hsl(0,0%,98%);
+
+    --clr-red:hsl(0, 78%, 62%);
+    --clr-blue:hsl(212, 86%, 64%);
+    --clr-orange:hsl(34, 97%, 64%);
+    --clr-cyan:hsl(180, 62%, 55%);
+
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-normal);
+    line-height: 1.7;
+    color: var(--clr-neutral-400);
+}
+body{
+    margin: 0;
+    padding-block-end: 5rem;
+}
+h1,h2,h3{
+    line-height: 1.1;
+    color: var(--clr-neutral-900);
+}
+.wrapper{
+    max-width: 1100px;
+    margin-inline: auto;
+}
+.wrapper--narrow{
+    max-width: 550px;
+}
+header{
+    text-align: center;
+    margin-block: 6rem;
+}
+
+h1{
+    font-size: var(--fs-900);
+    font-weight: var(--fw-normal);
+}
+h1 span{
+    font-weight: var(--fw-bold);
+}
+header > p{
+    font-weight: var(--fw-light);
+    font-size: var(--fs-500);
+}
+.layout-grid{
+    display: grid;
+    gap: var(--gap);
+}
+@media (min-width:800px) {
+   .layout-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+   } 
+}
+
+
+
+.layout-grid >* {
+    flex: 1;
+}
+.col{
+    display: grid;
+    gap: var(--gap);
+    align-content: center;
+}
+.card{
+    padding: 2rem;
+    border-top: 6px solid red;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 1.5rem -0.5rem rgb(0 50 100 / 0.15);
+}
+.border-red{
+    border-color: var(--clr-red);
+}
+.border-blue{
+    border-color: var(--clr-blue);
+}
+.border-orange{
+    border-color: var(--clr-orange);
+}
+.border-cyan{
+    border-color: var(--clr-cyan);
+}
+.card-img{
+    display: block;
+    margin-left: auto;
+    margin-top: 1rem;
+} 
